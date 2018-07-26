@@ -180,9 +180,10 @@ function runLighthouse(url, flags, config) {
    * @return {Promise<{}>}
    */
   function potentiallyKillChrome() {
+    /*
     if (launchedChrome !== undefined) {
       return launchedChrome.kill();
-    }
+    }*/
     return Promise.resolve({});
   }
 }

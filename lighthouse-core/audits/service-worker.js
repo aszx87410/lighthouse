@@ -35,6 +35,8 @@ class ServiceWorker extends Audit {
     const url = artifacts.URL.finalUrl;
 
     const origin = new URL(url).origin;
+    console.log('origin:', origin)
+    console.log('versions:', versions)
     const matchingSW = versions.filter(v => v.status === 'activated')
         .find(v => new URL(v.scriptURL).origin === origin);
 
